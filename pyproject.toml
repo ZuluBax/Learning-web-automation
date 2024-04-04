@@ -12,6 +12,7 @@ black = "^24.3.0"
 pyright = "^1.1.356"
 behave = "^1.2.6"
 allure2-behave = "^2.3.4"
+selenium = "^4.19.0"
 
 
 [build-system]
