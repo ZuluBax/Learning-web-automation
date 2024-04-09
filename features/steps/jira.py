@@ -55,18 +55,16 @@ def step_impl(context):
 @when("I click to log out")
 def step_impl(context):
     wait = WebDriverWait(context.browser, timeout=10)
-    # context.browser.find_element(By.CSS_SELECTOR, '[aria-label="Your profile and settings"]').click()
+
     wait.until(
         EC.presence_of_element_located(
             (By.CSS_SELECTOR, '[aria-label="Your profile and settings"]')
         )
     ).click()
-    # context.browser.find_element(By.CLASS_NAME, 'css-vnrk9l').click()
+
     wait.until(EC.element_to_be_clickable((By.LINK_TEXT, "Log out"))).click()
-    # context.browser.find_element(By.LINK_TEXT, "Log out").click()
 
     wait.until(EC.element_to_be_clickable((By.ID, "logout-submit"))).click()
-    # context.browser.find_element(By.ID, "logout-submit").click()
 
 
 @then("I am logged out")
